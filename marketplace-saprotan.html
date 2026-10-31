@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace Saprotan — AgriLink</title>
+  <meta name="description" content="Pengadaan benih, pupuk, pestisida, dan alsintan dari supplier resmi terverifikasi.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-role="farmer">
+
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="app-container">
+
+    <!-- SIDEBAR PETANI -->
+    <aside class="app-sidebar" id="appSidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="sidebar-brand">
+          <div class="brand-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12A10 10 0 0 1 12 2z"/><path d="M12 18V8"/><path d="M12 12c-2.5-2.5-4-1-5 1"/><path d="M12 9c2.5-2.5 4-1 5 1"/></svg>
+          </div>
+          <span class="brand-title">Agri<span>Link</span></span>
+        </a>
+      </div>
+
+      <div class="sidebar-role-indicator">
+        <span class="role-info-label">Peran Aktif</span>
+        <span class="role-info-value">PETANI</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Usaha Tani</div>
+        
+        <a href="index.html" class="nav-item">
+          <svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Dashboard Petani</span>
+        </a>
+
+        <a href="perencanaan-lahan.html" class="nav-item">
+          <svg class="icon-svg" viewBox="0 0 24 24"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+          <span>Perencanaan Lahan</span>
+          <span class="nav-item-badge">3</span>
+        </a>
+
+        <a href="estimasi-modal.html" class="nav-item">
+          <svg class="icon-svg" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
+          <span>Estimasi Modal</span>
+        </a>
+
+        <a href="marketplace-saprotan.html" class="nav-item active">
+          <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span>Marketplace Saprotan</span>
+        </a>
+
+        <a href="catatan-panen.html" class="nav-item">
+          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>Pencatatan Panen</span>
+          <span class="nav-item-badge">2</span>
+        </a>
+
+        <a href="pasar-hasil-tani.html" class="nav-item">
+          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Pasar Hasil Tani (Jual)</span>
+        </a>
+
+        <a href="pesanan-transaksi.html" class="nav-item">
+          <svg class="icon-svg" viewBox="0 0 24 24"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
+          <span>Pesanan & Transaksi</span>
+          <span class="nav-item-badge">3</span>
+        </a>
+
+        <a href="langganan.html" class="nav-item">
+          <svg class="icon-svg" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>Status Langganan</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user-card">
+          <div class="user-avatar-circle">BS</div>
+          <div class="user-text-meta">
+            <div class="user-display-name">Pak Budi Santoso</div>
+            <div class="user-subrole">Petani (Produsen & Penjual)</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="app-main">
+      <header class="app-header">
+        <div class="header-left">
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" title="Buka Menu">
+            <svg class="icon-svg" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          
+          <div class="breadcrumb-area">
+            <h1 class="page-main-title">Marketplace Saprotan</h1>
+            <div class="breadcrumb-trail">
+              <a href="index.html">AgriLink</a>
+              <span>/</span>
+              <span>Usaha Tani</span>
+              <span>/</span>
+              <span>Marketplace Saprotan</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="header-role-switcher" title="Beralih Peran Pengguna">
+            <a href="index.html" class="role-switch-btn active">Petani</a>
+            <a href="supplier-dashboard.html" class="role-switch-btn">Supplier</a>
+            <a href="buyer-dashboard.html" class="role-switch-btn">Buyer</a>
+            <a href="admin-dashboard.html" class="role-switch-btn">Admin</a>
+          </div>
+
+          <button class="header-action-btn" title="Notifikasi" onclick="showNotification('Semua produk saprotan dijamin keasliannya oleh supplier resmi.', 'info')">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            <span class="notification-dot"></span>
+          </button>
+        </div>
+      </header>
+
+      <main class="page-container">
+        
+        <div class="section-header">
+          <div class="section-title-group">
+            <h2>Marketplace Sarana Produksi Pertanian</h2>
+            <p>Pengadaan benih unggul, pupuk bersubsidi & non-subsidi, pestisida hayati, dan alat mesin pertanian.</p>
+          </div>
+          <div class="section-actions">
+            <a href="pesanan-transaksi.html" class="btn btn-secondary">
+              <svg class="icon-svg icon-svg-sm" viewBox="0 0 24 24"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/></svg>
+              Riwayat Pesanan Saya
+            </a>
+          </div>
+        </div>
+
+        <!-- Filter & Search Bar -->
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 0.75rem;">
+          <div style="display: flex; gap: 0.35rem; flex-wrap: wrap;">
+            <button class="btn btn-secondary btn-sm supply-cat-btn active" data-category="all">Semua Kategori</button>
+            <button class="btn btn-secondary btn-sm supply-cat-btn" data-category="benih">Benih & Bibit</button>
+            <button class="btn btn-secondary btn-sm supply-cat-btn" data-category="pupuk">Pupuk</button>
+            <button class="btn btn-secondary btn-sm supply-cat-btn" data-category="proteksi">Proteksi Tanaman</button>
+            <button class="btn btn-secondary btn-sm supply-cat-btn" data-category="alat">Alat & Mesin</button>
+          </div>
+
+          <div class="search-input-wrap">
+            <svg class="icon-svg icon-svg-sm search-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" class="form-control" id="supplySearchInput" placeholder="Cari benih, pupuk, atau supplier...">
+          </div>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="grid-3col" id="supplyProductsGrid">
+          <!-- Populated via app.js -->
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Modal Checkout Order -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box" id="modalCheckoutOrder" style="display: none;">
+      <div class="modal-box-header">
+        <h3 class="modal-box-title">Konfirmasi & Snapshot Pesanan</h3>
+        <button class="modal-close-icon" data-modal-dismiss title="Tutup">
+          <svg class="icon-svg" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-box-body">
+        <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1.25rem;">
+          <div style="font-size: 0.72rem; text-transform: uppercase; color: var(--slate-500); font-weight: 700;">Rincian Item yang Dipesan:</div>
+          <div style="font-size: 1.05rem; font-weight: 800; color: var(--slate-900); margin: 0.2rem 0;" id="checkoutItemTitle">Nama Produk</div>
+          <div style="font-size: 0.8rem; color: var(--slate-600);">Partner Transaksi: <strong id="checkoutPartnerName">Nama Partner</strong></div>
+          <div style="font-size: 0.8rem; color: var(--slate-600);">Harga Satuan: <strong id="checkoutUnitPrice">Rp 0</strong></div>
+        </div>
+
+        <div class="grid-2col" style="gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label">Jumlah Pemesanan:</label>
+            <input type="number" min="1" class="form-control" id="checkoutQtyInput" value="1">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Stok Tersedia Saat Ini:</label>
+            <div style="padding: 0.5rem 0; font-weight: 700; color: var(--primary-800);" id="checkoutStockAvailable">0</div>
+          </div>
+        </div>
+
+        <div style="border-top: 1px dashed var(--slate-200); padding-top: 0.85rem; margin-top: 0.5rem;">
+          <div style="display: flex; justify-content: space-between; font-size: 0.84rem; margin-bottom: 0.35rem;">
+            <span>Subtotal Produk:</span>
+            <span id="checkoutSubtotalVal" style="font-weight: 600;">Rp 0</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 0.84rem; margin-bottom: 0.35rem;">
+            <span>Biaya Logistik & Pengiriman:</span>
+            <span>Rp 50.000</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-size: 1.05rem; font-weight: 800; color: var(--slate-900); margin-top: 0.5rem; border-top: 1px solid var(--slate-200); padding-top: 0.5rem;">
+            <span>Total Nilai Pesanan (Snapshot):</span>
+            <span id="checkoutTotalVal" style="color: var(--primary-800);">Rp 0</span>
+          </div>
+          <div class="form-hint" style="margin-top: 0.5rem;">
+            Integritas Data PRD 7.3: Nilai harga dan nama produk akan dikunci sebagai snapshot riwayat transaksi agar perubahan listing di masa depan tidak merusak riwayat transaksi lama.
+          </div>
+        </div>
+      </div>
+      <div class="modal-box-footer">
+        <button type="button" class="btn btn-secondary" data-modal-dismiss>Batal</button>
+        <button type="button" class="btn btn-primary" id="btnSubmitOrderCheckout">Konfirmasi Buat Pesanan</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-shelf" id="toastShelf"></div>
+  <script src="app.js"></script>
+</body>
+</html>

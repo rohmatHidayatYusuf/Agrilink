@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin — AgriLink</title>
+  <meta name="description" content="Dashboard Pengawasan dan Tata Kelola Sistem Informasi Pertanian AgriLink.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-role="admin">
+
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="app-container">
+
+    <!-- SIDEBAR ADMIN -->
+    <aside class="app-sidebar" id="appSidebar">
+      <div class="sidebar-header">
+        <a href="admin-dashboard.html" class="sidebar-brand">
+          <div class="brand-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12A10 10 0 0 1 12 2z"/><path d="M12 18V8"/><path d="M12 12c-2.5-2.5-4-1-5 1"/><path d="M12 9c2.5-2.5 4-1 5 1"/></svg>
+          </div>
+          <span class="brand-title">Agri<span>Link</span></span>
+        </a>
+      </div>
+
+      <div class="sidebar-role-indicator">
+        <span class="role-info-label">Peran Aktif</span>
+        <span class="role-info-value" style="color: #991b1b;">ADMIN</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Pengawasan Sistem</div>
+        
+        <a href="admin-dashboard.html" class="nav-item active">
+          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Ringkasan Sistem</span>
+        </a>
+
+        <a href="admin-users.html" class="nav-item">
+          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Manajemen Akun</span>
+        </a>
+
+        <a href="admin-moderasi.html" class="nav-item">
+          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="12" y1="9" x2="12.01" y2="9"/></svg>
+          <span>Moderasi Listing</span>
+        </a>
+
+        <a href="admin-audit.html" class="nav-item">
+          <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Audit Log Sistem</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user-card">
+          <div class="user-avatar-circle" style="background: #fee2e2; color: #991b1b;">AD</div>
+          <div class="user-text-meta">
+            <div class="user-display-name">Admin Pengawas Sistem</div>
+            <div class="user-subrole">Administrator AgriLink</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="app-main">
+      <header class="app-header">
+        <div class="header-left">
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" title="Buka Menu">
+            <svg class="icon-svg" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          
+          <div class="breadcrumb-area">
+            <h1 class="page-main-title">Dashboard Admin</h1>
+            <div class="breadcrumb-trail">
+              <span>AgriLink</span>
+              <span>/</span>
+              <span>Admin</span>
+              <span>/</span>
+              <span>Ringkasan Pengawasan</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="header-role-switcher" title="Beralih Peran Pengguna">
+            <a href="index.html" class="role-switch-btn">Petani</a>
+            <a href="supplier-dashboard.html" class="role-switch-btn">Supplier</a>
+            <a href="buyer-dashboard.html" class="role-switch-btn">Buyer</a>
+            <a href="admin-dashboard.html" class="role-switch-btn active">Admin</a>
+          </div>
+
+          <button class="header-action-btn" title="Notifikasi" onclick="showNotification('Seluruh transaksi memenuhi snapshot integritas data PRD 7.3.', 'info')">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            <span class="notification-dot"></span>
+          </button>
+        </div>
+      </header>
+
+      <main class="page-container">
+        
+        <div class="section-header">
+          <div class="section-title-group">
+            <h2>Pengawasan Sistem & Administrasi Platform</h2>
+            <p>Ringkasan operasional platform AgriLink, pengawasan peran pengguna, dan pemeliharaan integritas audit.</p>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="metric-card">
+            <div class="metric-header">
+              <span class="metric-label">Total Pengguna Terdaftar</span>
+              <div class="metric-icon-wrap primary"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+            </div>
+            <div class="metric-value">124 Pengguna</div>
+            <div class="metric-sub">94 Petani, 18 Supplier, 12 Buyer</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-header">
+              <span class="metric-label">Listing Aktif</span>
+              <div class="metric-icon-wrap info"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+            </div>
+            <div class="metric-value">32 Listing</div>
+            <div class="metric-sub">24 Saprotan, 8 Hasil Panen</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-header">
+              <span class="metric-label">Total Volume Transaksi</span>
+              <div class="metric-icon-wrap warning"><svg class="icon-svg" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/></svg></div>
+            </div>
+            <div class="metric-value">Rp 48.650.000</div>
+            <div class="metric-sub">Bulan Berjalan (Snapshot Valid)</div>
+          </div>
+        </div>
+
+        <div class="grid-2col">
+          <div class="card-panel">
+            <div class="card-panel-header">
+              <span class="card-panel-title">Tindakan Pengawasan Utama</span>
+            </div>
+            <div class="card-panel-body" style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <a href="admin-users.html" class="btn btn-secondary" style="justify-content: flex-start; text-decoration: none;">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                <span style="margin-left: 0.5rem;">Kelola Akun & Penugasan Peran Pengguna</span>
+              </a>
+              <a href="admin-moderasi.html" class="btn btn-secondary" style="justify-content: flex-start; text-decoration: none;">
+                <svg class="icon-svg" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+                <span style="margin-left: 0.5rem;">Tinjau Moderasi Listing Produk</span>
+              </a>
+              <a href="admin-audit.html" class="btn btn-secondary" style="justify-content: flex-start; text-decoration: none;">
+                <svg class="icon-svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span style="margin-left: 0.5rem;">Periksa Audit Trail Log Sistem</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="card-panel">
+            <div class="card-panel-header">
+              <span class="card-panel-title">Catatan Kepatuhan PRD</span>
+            </div>
+            <div class="card-panel-body" style="font-size: 0.82rem; color: var(--slate-600); line-height: 1.5;">
+              Sesuai PRD Bab 6.7: Admin memiliki hak akses administratif terpisah dari pengguna biasa. Tindakan administratif seperti penonaktifan listing tidak menghapus catatan transaksi historis demi menjaga integritas data.
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="toast-shelf" id="toastShelf"></div>
+  <script src="app.js"></script>
+</body>
+</html>

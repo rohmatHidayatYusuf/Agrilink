@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesanan Masuk Supplier — AgriLink</title>
+  <meta name="description" content="Kelola pemenuhan pesanan kebutuhan pertanian dari petani.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-role="supplier">
+
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="app-container">
+
+    <!-- SIDEBAR SUPPLIER -->
+    <aside class="app-sidebar" id="appSidebar">
+      <div class="sidebar-header">
+        <a href="supplier-dashboard.html" class="sidebar-brand">
+          <div class="brand-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12A10 10 0 0 1 12 2z"/><path d="M12 18V8"/><path d="M12 12c-2.5-2.5-4-1-5 1"/><path d="M12 9c2.5-2.5 4-1 5 1"/></svg>
+          </div>
+          <span class="brand-title">Agri<span>Link</span></span>
+        </a>
+      </div>
+
+      <div class="sidebar-role-indicator">
+        <span class="role-info-label">Peran Aktif</span>
+        <span class="role-info-value" style="color: #0369a1;">SUPPLIER</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Manajemen Supplier</div>
+        
+        <a href="supplier-dashboard.html" class="nav-item">
+          <svg class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Ringkasan Supplier</span>
+        </a>
+
+        <a href="supplier-katalog.html" class="nav-item">
+          <svg class="icon-svg" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          <span>Katalog Produk Saprotan</span>
+        </a>
+
+        <a href="supplier-pesanan.html" class="nav-item active">
+          <svg class="icon-svg" viewBox="0 0 24 24"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
+          <span>Pesanan Masuk</span>
+          <span class="nav-item-badge">1</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user-card">
+          <div class="user-avatar-circle" style="background: #e0f2fe; color: #0369a1;">TM</div>
+          <div class="user-text-meta">
+            <div class="user-display-name">CV Tani Makmur Sejahtera</div>
+            <div class="user-subrole">Supplier Saprotan Resmi</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="app-main">
+      <header class="app-header">
+        <div class="header-left">
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" title="Buka Menu">
+            <svg class="icon-svg" viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </button>
+          
+          <div class="breadcrumb-area">
+            <h1 class="page-main-title">Pesanan Masuk</h1>
+            <div class="breadcrumb-trail">
+              <a href="supplier-dashboard.html">AgriLink</a>
+              <span>/</span>
+              <span>Supplier</span>
+              <span>/</span>
+              <span>Pesanan Masuk</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="header-role-switcher" title="Beralih Peran Pengguna">
+            <a href="index.html" class="role-switch-btn">Petani</a>
+            <a href="supplier-dashboard.html" class="role-switch-btn active">Supplier</a>
+            <a href="buyer-dashboard.html" class="role-switch-btn">Buyer</a>
+            <a href="admin-dashboard.html" class="role-switch-btn">Admin</a>
+          </div>
+
+          <button class="header-action-btn" title="Notifikasi" onclick="showNotification('Pesanan siap dikirim ke alamat lahan petani.', 'info')">
+            <svg class="icon-svg" viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            <span class="notification-dot"></span>
+          </button>
+        </div>
+      </header>
+
+      <main class="page-container">
+        
+        <div class="section-header">
+          <div class="section-title-group">
+            <h2>Pesanan Masuk dari Petani</h2>
+            <p>Verifikasi ketersediaan stok fisik dan perbarui status pemenuhan barang pesanan sesuai PRD 8.1.</p>
+          </div>
+        </div>
+
+        <!-- Orders Container -->
+        <div id="ordersListContainer">
+          <!-- Populated via app.js -->
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <div class="toast-shelf" id="toastShelf"></div>
+  <script src="app.js"></script>
+</body>
+</html>
