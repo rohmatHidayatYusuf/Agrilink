@@ -37,7 +37,7 @@ if (isset($_GET['role'])) {
 
     <meta name="description" content="Masuk ke platform terintegrasi pengelolaan usaha pertanian AgriLink.">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../style.css">
 
     <style>
         .auth-page-wrapper {
